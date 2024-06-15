@@ -1,0 +1,34 @@
+@import 'styles/variables';
+
+.top {
+    width: 100%;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 224px;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 12px;
+
+            p {
+                color: $gray;
+
+                strong { color: $pink; }
+            }
+            
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #F0F0F0;
+    }
+}
