@@ -9,7 +9,7 @@ function Categories() {
                 <Category
                     name={category.name}
                     icon={category.icon}
-                    alt={category.icon}
+                    alt={category.alt}
                     active={category.active}
                     key={category.name}
                 />
