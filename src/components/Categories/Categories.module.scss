@@ -1,0 +1,8 @@
+@import 'styles/variables';
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 32px $default-padding-horizontal;
+}
