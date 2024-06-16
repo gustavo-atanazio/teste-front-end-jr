@@ -13,7 +13,8 @@ function App() {
             <main>
                 <Banner/>
                 <Categories/>
-                <Products/>
+                <Products showPanel/>
+                <Products showPanel={false}/>
                 <Brands/>
             </main>
 
