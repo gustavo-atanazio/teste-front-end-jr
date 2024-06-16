@@ -1,9 +1,20 @@
+import BuyButton from 'components/BuyButton';
+import { useModalContext } from 'context/Modal';
 import IProduct from 'types/IProduct';
+
 import styles from './Product.module.scss';
 
 function Product({ productName, descriptionShort, photo, price }: IProduct) {
+    const { openModal, setProductData } = useModalContext();
+
     return (
-        <div className={styles.product}>
+        <div
+            className={styles.product}
+            onClick={() => {
+                openModal();
+                setProductData({ productName, descriptionShort, photo, price });
+            }}
+        >
             <img src={photo} alt={productName}/>
 
             <p className={styles.description}>{descriptionShort}</p>
@@ -15,7 +26,7 @@ function Product({ productName, descriptionShort, photo, price }: IProduct) {
                 <p>Frete grátis</p>
             </div>
 
-            <button>COMPRAR</button>
+            <BuyButton/>
         </div>
     );
 }
