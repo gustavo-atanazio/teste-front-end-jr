@@ -1,0 +1,31 @@
+@import 'styles/variables';
+
+.products {
+    padding: 0 $default-padding-horizontal;
+    text-align: center;
+
+    h2 {
+        color: $pink;
+        position: relative;
+        display: inline-block;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 35%;
+            width: 360px;
+            height: 1px;
+            background-color: #DEDEDE;
+        }
+
+        &::before { left: -400px; }
+
+        &::after { right: -400px; }
+    }
+
+    .partners_container {
+        display: flex;
+        justify-content: space-between;
+        margin: 64px 0;
+    }
+}

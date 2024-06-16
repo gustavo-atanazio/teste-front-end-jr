@@ -1,0 +1,66 @@
+@import 'styles/variables';
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 8px;
+    list-style: none;
+
+    .categories {
+        display: flex;
+
+        a {
+            text-decoration: none;
+            flex-grow: 1;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            border: 1px solid #BDBDBD;
+            color: #3B3B3B;
+    
+            &:first-child {
+                color: $pink;
+                font-weight: 800;
+            }
+        }
+    }
+
+    .carousel {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .items {
+            display: flex;
+            gap: 64px;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            padding: 12px 8px;
+        }
+
+        > button {
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 34px;
+            background-size: cover;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    
+        .leftArrow {
+            left: -56px;
+            background-image: url('/img/left_arrow.svg');
+        }
+    
+        .rightArrow {
+            right: -56px;
+            background-image: url('/img/right_arrow.svg');
+        }
+    }
+}
