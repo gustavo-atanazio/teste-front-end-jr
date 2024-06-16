@@ -4,8 +4,12 @@ import Categories from 'components/Categories';
 import Products from 'components/Products';
 import Brands from 'components/Brands';
 import Footer from 'components/Footer';
+import Modal from 'components/Modal';
+import { useModalContext } from 'context/Modal';
 
 function App() {
+    const { open } = useModalContext();
+
     return (
         <>
             <Header/>
@@ -16,6 +20,8 @@ function App() {
                 <Products showPanel/>
                 <Products showPanel={false}/>
                 <Brands/>
+
+                {open && <Modal/>}
             </main>
 
             <Footer/>

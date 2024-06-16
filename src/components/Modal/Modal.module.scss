@@ -1,0 +1,69 @@
+// Importando fonte específica do título
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import 'styles/variables';
+
+.background {
+    width: 100vw;
+    min-height: 100vh;
+
+    position: fixed;
+    top: 0;
+    backdrop-filter: brightness(0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal {
+        width: 769px;
+        background-color: #FFF;
+        padding: 16px;
+        
+        display: flex;
+        flex-direction: column;
+
+        .close {
+            align-self: flex-end;
+            width: 34px;
+            height: 34px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 96px;
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                font-family: 'Lato', sans-serif;
+
+                h6, strong {
+                    font-size: 20px;
+                    color: #041E50;
+                }
+
+                h6 { font-weight: 400; }
+
+                strong { font-weight: 700; }
+
+                p {
+                    font-size: 10px;
+                    color: #222;
+                }
+
+                a {
+                    font-size: 12px;
+                    text-decoration: none;
+                    color: #041E50;
+                }
+            }
+        }
+    }
+}
